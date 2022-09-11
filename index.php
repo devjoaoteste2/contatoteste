@@ -128,7 +128,7 @@
                               <label for="mensagem">Mensagem</label>
                           </div>
                           <div class="inputBox btn-enviar">
-                              <input id="button" type="submit" disabled="disabled" value="Enviar"><i class="fa-solid fa-paper-plane"></i>
+                              <input id="button" type="submit" value="Enviar"><i class="fa-solid fa-paper-plane"></i>
                           </div>
                       </div>
                   </form>
