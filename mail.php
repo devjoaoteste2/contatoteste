@@ -1,18 +1,12 @@
 <?php
-
-$name = $_POST['name'];
-$email = $_POST['email'];
-$phone = $_POST['phone'];
-$subject = $_POST['subject'];
-$message = $_POST['message'];
-
-$mailheader = "From:".$name."<".$email.">\r\n";
-
-$recipient = "contato@risaengenharia.com.br";
-
-mail($recipient, $subject, $message, $mailheader)
-or die("Error!");
-
-echo"message send!";
-
+$headers = "MIME-Version: 1.1\r\n";
+$headers .= "Content-type: text/plain; charset=UTF-8\r\n";
+$headers .= ""From:".$name."<".$email.">\r\n"; // remetente
+$headers .= "Return-Path: eu@seudominio.com\r\n"; // return-path
+$envio = mail("contato@risaengenharia.com.br", "Assunto", "Texto", $headers);
+ 
+if($envio)
+ echo "Mensagem enviada com sucesso";
+else
+ echo "A mensagem não pode ser enviada";
 ?>
