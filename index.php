@@ -98,7 +98,7 @@
               </div>
               <div class="contactForm fadeRight animate">
                   <h2>Envie-nos uma mensagem</h2>
-                  <form id="form">
+                  <form id="form" action="mail.php" method="post">
                       <div class="formBox">
                           <div class="inputBox w50">
                               <input type="text" id="nome" name="name" required>
